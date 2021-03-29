@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 const App = () => {
   const APP_ID = '21c32d65';
   const APP_KEY = 'ceafebf07abc57b689634c3f56f6b66a';
-
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
   const [query,setQuery] = useState('chicken');
@@ -44,6 +43,7 @@ const App = () => {
         key={recipe.recipe.label} 
         title={recipe.recipe.label} 
         image={recipe.recipe.image}
+        time={recipe.recipe.totalTime}
         ingredients={recipe.recipe.ingredients}
         />
       ))}

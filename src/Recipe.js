@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './recipe.module.css';
 
-const Recipe = ({title, calories, image, ingredients}) => {
+const Recipe = ({title, time, image, ingredients}) => {
     return (
         <div className={style.recipe}>
             <h1>{title}</h1>
@@ -10,6 +10,7 @@ const Recipe = ({title, calories, image, ingredients}) => {
                     <li>{ingredient.text}</li>
                 ))}
             </ol>
+            <h3> Total Time : {time}</h3>
             <img src={image} alt=""/>
         </div>
     );
